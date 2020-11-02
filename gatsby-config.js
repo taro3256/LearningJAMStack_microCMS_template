@@ -34,9 +34,16 @@ module.exports = {
         includePaths: [require("path").resolve(__dirname, "node_modules")],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+        resolve: `gatsby-source-microcms`,
+        options: {
+            apiKey: `17da9e47-63ed-43fe-a932-117b1c0bd3c7`,
+            serviceId: `oda-sys`,
+            apis: [{
+                endpoint: `information`,
+            }],
+        }
+    },
   ],
   pathPrefix: "gatsby-starter-basic-bootstrap",
 };
